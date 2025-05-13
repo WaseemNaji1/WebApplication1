@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ? ????? JWT
+// ?JWT
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new Exception("JWT Key is missing in appsettings.json");
 var key = Encoding.ASCII.GetBytes(jwtKey);
 builder.Services.AddAuthentication(options =>
